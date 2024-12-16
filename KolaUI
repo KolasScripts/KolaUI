@@ -55,6 +55,12 @@ local Library = {}
 	local KeybindText = Instance.new("TextLabel")
 	local KeybindButton = Instance.new("TextButton")
 	local UICorner_20 = Instance.new("UICorner")
+    local Library = {}
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
 
 	--Properties:
 
@@ -470,7 +476,7 @@ function Library:Init()
 		local Players = game:GetService("Players")
 		local player = Players.LocalPlayer
 		local LeftFrame = script.Parent
-		local MainFrame = script.Parent.Parent:WaitForChild("MainFrame")
+		local MainFrame = LeftFrame.Parent:WaitForChild("MainFrame")
 
 		print("Main script initializing...")
 
@@ -975,15 +981,228 @@ function Library:Init()
 		updateKeybindText()
 	end
 
-	coroutine.wrap(InitializeMainScript)()
+	local Window = {}
+    local Tabs = {}
+    local activeTab = nil
+    local elementSpacing = 5
+    local elementPadding = UDim2.new(0, 10, 0, 10)
+
+    function Window:CreateTab(tabName)
+        local Tab = {}
+        
+        -- Create tab button
+        local tabButton = Button1:Clone()
+        tabButton.Name = tabName
+        tabButton.ButtonLabel.Text = tabName
+        tabButton.Parent = LeftFrame
+        
+        -- Create tab container
+        local tabContainer = Instance.new("ScrollingFrame")
+        tabContainer.Name = tabName .. "Container"
+        tabContainer.Size = UDim2.new(1, -20, 1, -80)
+        tabContainer.Position = UDim2.new(0, 10, 0, 70)
+        tabContainer.BackgroundTransparency = 1
+        tabContainer.ScrollBarThickness = 4
+        tabContainer.Visible = false
+        tabContainer.Parent = MainFrame
+        
+        -- Add UIListLayout
+        local listLayout = Instance.new("UIListLayout")
+        listLayout.Padding = UDim.new(0, elementSpacing)
+        listLayout.Parent = tabContainer
+        
+        -- Tab Functions
+        function Tab:AddToggle(toggleName, callback)
+            local toggle = ToggleFrame:Clone()
+            toggle.ToggleLabel.Text = toggleName
+            toggle.Parent = tabContainer
+            
+            local enabled = false
+            local switchBg = toggle.SwitchBackground
+            local knob = switchBg.Knob
+            
+            switchBg.MouseButton1Click:Connect(function()
+                enabled = not enabled
+                local knobPos = enabled and UDim2.new(0.6, 0, 0, 0) or UDim2.new(0, 0, 0, 0)
+                local bgColor = enabled and Color3.fromRGB(32, 200, 52) or Color3.fromRGB(50, 50, 50)
+                
+                TweenService:Create(knob, TweenInfo.new(0.2), {Position = knobPos}):Play()
+                TweenService:Create(switchBg, TweenInfo.new(0.2), {BackgroundColor3 = bgColor}):Play()
+                
+                if callback then callback(enabled) end
+            end)
+            
+            return toggle
+        end
+        
+        function Tab:AddSlider(sliderName, minValue, maxValue, defaultValue, callback)
+            local slider = SliderFrame:Clone()
+            slider.SliderLabel.Text = sliderName
+            slider.Parent = tabContainer
+            
+            local track = slider.Track
+            local knob = track.Knob
+            local fillBar = track.FillBar
+            local valueDisplay = slider.ValueDisplay
+            
+            local function updateSlider(input)
+                local pos = math.clamp((input.Position.X - track.AbsolutePosition.X) / track.AbsoluteSize.X, 0, 1)
+                local value = math.floor(minValue + (maxValue - minValue) * pos)
+                
+                TweenService:Create(knob, TweenInfo.new(0.1), {Position = UDim2.new(pos, -5, 0, 0)}):Play()
+                TweenService:Create(fillBar, TweenInfo.new(0.1), {Size = UDim2.new(pos, 0, 1, 0)}):Play()
+                
+                valueDisplay.Text = tostring(value)
+                if callback then callback(value) end
+            end
+            
+            -- Add slider dragging functionality
+            local dragging = false
+            knob.InputBegan:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    dragging = true
+                end
+            end)
+            
+            UserInputService.InputEnded:Connect(function(input)
+                if input.UserInputType == Enum.UserInputType.MouseButton1 then
+                    dragging = false
+                end
+            end)
+            
+            UserInputService.InputChanged:Connect(function(input)
+                if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+                    updateSlider(input)
+                end
+            end)
+            
+            return slider
+        end
+        
+        function Tab:AddDropdown(dropdownName, options, callback)
+            local dropdown = DropdownFrame:Clone()
+            dropdown.DropdownLabel.Text = dropdownName
+            dropdown.Parent = tabContainer
+            
+            local header = dropdown.DropdownHeader
+            local listFrame = dropdown.DropdownListFrame
+            local isOpen = false
+            
+            -- Populate options
+            for _, option in ipairs(options) do
+                local optionButton = Instance.new("TextButton")
+                optionButton.Size = UDim2.new(1, 0, 0, 30)
+                optionButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+                optionButton.Text = option
+                optionButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+                optionButton.Parent = listFrame
+                
+                optionButton.MouseButton1Click:Connect(function()
+                    header.Text = option
+                    listFrame.Visible = false
+                    if callback then callback(option) end
+                end)
+            end
+            
+            header.MouseButton1Click:Connect(function()
+                isOpen = not isOpen
+                listFrame.Visible = isOpen
+            end)
+            
+            return dropdown
+        end
+        
+        function Tab:AddKeybind(keybindName, defaultKey, callback)
+            local keybind = KeybindFrame:Clone()
+            keybind.KeybindText.Text = keybindName
+            keybind.Parent = tabContainer
+            
+            local button = keybind.KeybindButton
+            local currentKey = defaultKey or Enum.KeyCode.RightShift
+            local listening = false
+            
+            local function updateKeybindText()
+                button.Text = currentKey.Name
+            end
+            
+            button.MouseButton1Click:Connect(function()
+                listening = true
+                button.Text = "..."
+            end)
+            
+            UserInputService.InputBegan:Connect(function(input)
+                if listening and input.UserInputType == Enum.UserInputType.Keyboard then
+                    currentKey = input.KeyCode
+                    updateKeybindText()
+                    listening = false
+                elseif input.KeyCode == currentKey and not listening then
+                    if callback then callback() end
+                end
+            end)
+            
+            updateKeybindText()
+            return keybind
+        end
+        
+        -- Tab switching logic
+        tabButton.MouseButton1Click:Connect(function()
+            if activeTab then
+                activeTab.Visible = false
+            end
+            tabContainer.Visible = true
+            activeTab = tabContainer
+        end)
+        
+        Tabs[tabName] = Tab
+        return Tab
+    end
+    
+    -- Initialize first tab if created
+    if next(Tabs) then
+        local firstTab = next(Tabs)
+        Tabs[firstTab].Visible = true
+        activeTab = Tabs[firstTab]
+    end
+    
+    -- Make UI draggable
+    local dragging = false
+    local dragStart = nil
+    local startPos = nil
+    
+    MainFrame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = true
+            dragStart = input.Position
+            startPos = MainFrame.Position
+        end
+    end)
+    
+    UserInputService.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - dragStart
+            MainFrame.Position = UDim2.new(
+                startPos.X.Scale,
+                startPos.X.Offset + delta.X,
+                startPos.Y.Scale,
+                startPos.Y.Offset + delta.Y
+            )
+        end
+    end)
+    
+    UserInputService.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragging = false
+        end
+    end)
+
+    coroutine.wrap(InitializeMainScript)()
 	coroutine.wrap(InitializeToggleScript)()
 	coroutine.wrap(InitializeSliderScript)()
 	coroutine.wrap(InitializeDropdownScript)()
 	coroutine.wrap(InitializeMovingScript)()
 	coroutine.wrap(InitializeKeybindScript)()
-
-	local window = {}
-	return window
+    
+    return Window
 end
 
 return Library
