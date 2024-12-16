@@ -1,0 +1,1237 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local KolaUI = Instance.new("ScreenGui")
+local LeftFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Button1 = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local ButtonLabel = Instance.new("TextLabel")
+local Indicator = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Button2 = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local ButtonLabel_2 = Instance.new("TextLabel")
+local Indicator_2 = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local UserThumbnail = Instance.new("ImageLabel")
+local UICorner_6 = Instance.new("UICorner")
+local MainFrame = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local ToggleFrame = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local ToggleLabel = Instance.new("TextLabel")
+local SwitchBackground = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Knob = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local SliderFrame = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local SliderLabel = Instance.new("TextLabel")
+local Track = Instance.new("Frame")
+local Knob_2 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local FillBar = Instance.new("Frame")
+local ValueDisplay = Instance.new("TextLabel")
+local Heading = Instance.new("Frame")
+local HeadingText = Instance.new("TextLabel")
+local ButtonFrame = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local SeperatorFrame = Instance.new("Frame")
+local DropdownFrame = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local DropdownHeader = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local DropdownLabel = Instance.new("TextLabel")
+local DropdownListFrame = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local UIListLayout = Instance.new("UIListLayout")
+local LabelFrame = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local SliderLabel_2 = Instance.new("TextLabel")
+local KeybindFrame = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local KeybindText = Instance.new("TextLabel")
+local KeybindButton = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+
+--Properties:
+
+KolaUI.Name = "KolaUI"
+KolaUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+KolaUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+LeftFrame.Name = "LeftFrame"
+LeftFrame.Parent = KolaUI
+LeftFrame.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+LeftFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LeftFrame.BorderSizePixel = 0
+LeftFrame.Position = UDim2.new(0.209967807, 0, 0.114992723, 0)
+LeftFrame.Size = UDim2.new(0, 136, 0, 442)
+
+UICorner.Parent = LeftFrame
+
+Button1.Name = "Button1"
+Button1.Parent = LeftFrame
+Button1.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Button1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button1.BorderSizePixel = 0
+Button1.Position = UDim2.new(0, 0, 0.204751134, 0)
+Button1.Size = UDim2.new(0, 136, 0, 30)
+Button1.Font = Enum.Font.FredokaOne
+Button1.Text = ""
+Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button1.TextSize = 19.000
+Button1.TextWrapped = true
+Button1.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_2.Parent = Button1
+
+ButtonLabel.Name = "ButtonLabel"
+ButtonLabel.Parent = Button1
+ButtonLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonLabel.BackgroundTransparency = 1.000
+ButtonLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonLabel.BorderSizePixel = 0
+ButtonLabel.Position = UDim2.new(0.0497259311, 0, 0, 0)
+ButtonLabel.Size = UDim2.new(0.800000012, 0, 1, 0)
+ButtonLabel.Font = Enum.Font.FredokaOne
+ButtonLabel.Text = "Button"
+ButtonLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+ButtonLabel.TextSize = 19.000
+ButtonLabel.TextWrapped = true
+ButtonLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Indicator.Name = "Indicator"
+Indicator.Parent = Button1
+Indicator.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Indicator.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator.BorderSizePixel = 0
+Indicator.Position = UDim2.new(0, 125, 0, 3)
+Indicator.Size = UDim2.new(0, 6, 0, 24)
+
+UICorner_3.Parent = Indicator
+
+Button2.Name = "Button2"
+Button2.Parent = LeftFrame
+Button2.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+Button2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button2.BorderSizePixel = 0
+Button2.Position = UDim2.new(0, 0, 0.286199093, 0)
+Button2.Size = UDim2.new(0, 136, 0, 30)
+Button2.Font = Enum.Font.FredokaOne
+Button2.Text = ""
+Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button2.TextSize = 19.000
+Button2.TextWrapped = true
+Button2.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_4.Parent = Button2
+
+ButtonLabel_2.Name = "ButtonLabel"
+ButtonLabel_2.Parent = Button2
+ButtonLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonLabel_2.BackgroundTransparency = 1.000
+ButtonLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonLabel_2.BorderSizePixel = 0
+ButtonLabel_2.Position = UDim2.new(0.0497259311, 0, 0, 0)
+ButtonLabel_2.Size = UDim2.new(0.800000012, 0, 1, 0)
+ButtonLabel_2.Font = Enum.Font.FredokaOne
+ButtonLabel_2.Text = "Button"
+ButtonLabel_2.TextColor3 = Color3.fromRGB(200, 200, 200)
+ButtonLabel_2.TextSize = 19.000
+ButtonLabel_2.TextWrapped = true
+ButtonLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Indicator_2.Name = "Indicator"
+Indicator_2.Parent = Button2
+Indicator_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Indicator_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_2.BorderSizePixel = 0
+Indicator_2.Position = UDim2.new(0, 125, 0, 3)
+Indicator_2.Size = UDim2.new(0, 6, 0, 24)
+Indicator_2.Visible = false
+
+UICorner_5.Parent = Indicator_2
+
+UserThumbnail.Name = "UserThumbnail"
+UserThumbnail.Parent = LeftFrame
+UserThumbnail.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UserThumbnail.BackgroundTransparency = 1.000
+UserThumbnail.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UserThumbnail.BorderSizePixel = 0
+UserThumbnail.Position = UDim2.new(0.25, 0, 0.016769236, 0)
+UserThumbnail.Size = UDim2.new(0, 66, 0, 67)
+UserThumbnail.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+UserThumbnail.ScaleType = Enum.ScaleType.Fit
+
+UICorner_6.Parent = UserThumbnail
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = KolaUI
+MainFrame.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.296206355, 0, 0.114992723, 0)
+MainFrame.Size = UDim2.new(0, 650, 0, 442)
+
+UICorner_7.Parent = MainFrame
+
+ToggleFrame.Name = "ToggleFrame"
+ToggleFrame.Parent = MainFrame
+ToggleFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+ToggleFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToggleFrame.BorderSizePixel = 0
+ToggleFrame.Position = UDim2.new(0.0190114062, 0, 0.205633804, 0)
+ToggleFrame.Size = UDim2.new(1, -20, 0.0280000009, 40)
+
+UICorner_8.Parent = ToggleFrame
+
+ToggleLabel.Name = "ToggleLabel"
+ToggleLabel.Parent = ToggleFrame
+ToggleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToggleLabel.BackgroundTransparency = 1.000
+ToggleLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ToggleLabel.BorderSizePixel = 0
+ToggleLabel.Position = UDim2.new(0.0335968509, 0, 0, 0)
+ToggleLabel.Size = UDim2.new(0.871165037, 0, 1, 0)
+ToggleLabel.Font = Enum.Font.FredokaOne
+ToggleLabel.Text = "Enable Silent Aim"
+ToggleLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+ToggleLabel.TextSize = 19.000
+ToggleLabel.TextWrapped = true
+ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+SwitchBackground.Name = "SwitchBackground"
+SwitchBackground.Parent = ToggleFrame
+SwitchBackground.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+SwitchBackground.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SwitchBackground.BorderSizePixel = 0
+SwitchBackground.Position = UDim2.new(1, -60, 0.5, -10)
+SwitchBackground.Size = UDim2.new(0, 50, 0, 20)
+
+UICorner_9.CornerRadius = UDim.new(0.5, 0)
+UICorner_9.Parent = SwitchBackground
+
+Knob.Name = "Knob"
+Knob.Parent = SwitchBackground
+Knob.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Knob.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Knob.BorderSizePixel = 0
+Knob.Size = UDim2.new(0.400000006, 0, 1, 0)
+
+UICorner_10.Parent = Knob
+
+SliderFrame.Name = "SliderFrame"
+SliderFrame.Parent = MainFrame
+SliderFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+SliderFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SliderFrame.BorderSizePixel = 0
+SliderFrame.Position = UDim2.new(0.0190114062, 0, 0.354929566, 0)
+SliderFrame.Size = UDim2.new(1, -20, 0.0280000009, 40)
+
+UICorner_11.Parent = SliderFrame
+
+SliderLabel.Name = "SliderLabel"
+SliderLabel.Parent = SliderFrame
+SliderLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SliderLabel.BackgroundTransparency = 1.000
+SliderLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SliderLabel.BorderSizePixel = 0
+SliderLabel.Position = UDim2.new(0.0296442918, 0, 0.115217321, 0)
+SliderLabel.Size = UDim2.new(0.923445642, 0, 0.512499928, 0)
+SliderLabel.Font = Enum.Font.FredokaOne
+SliderLabel.Text = "Smoothing"
+SliderLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+SliderLabel.TextSize = 19.000
+SliderLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+Track.Name = "Track"
+Track.Parent = SliderFrame
+Track.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Track.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Track.BorderSizePixel = 0
+Track.Position = UDim2.new(0.0299999993, 0, 0.800000012, -5)
+Track.Size = UDim2.new(0.947000027, 0, 0.100000001, 0)
+
+Knob_2.Name = "Knob"
+Knob_2.Parent = Track
+Knob_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Knob_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Knob_2.BorderSizePixel = 0
+Knob_2.Size = UDim2.new(0, 12, 1, 0)
+
+UICorner_12.CornerRadius = UDim.new(0.5, 0)
+UICorner_12.Parent = Knob_2
+
+FillBar.Name = "FillBar"
+FillBar.Parent = Track
+FillBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FillBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FillBar.BorderSizePixel = 0
+FillBar.Size = UDim2.new(0, 0, 1, 0)
+
+ValueDisplay.Name = "ValueDisplay"
+ValueDisplay.Parent = SliderFrame
+ValueDisplay.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ValueDisplay.BackgroundTransparency = 1.000
+ValueDisplay.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ValueDisplay.BorderSizePixel = 0
+ValueDisplay.Position = UDim2.new(0.784584999, 0, 0.125, 0)
+ValueDisplay.Size = UDim2.new(0.191699609, 0, 0.512499988, 0)
+ValueDisplay.Font = Enum.Font.FredokaOne
+ValueDisplay.Text = "0"
+ValueDisplay.TextColor3 = Color3.fromRGB(200, 200, 200)
+ValueDisplay.TextSize = 19.000
+ValueDisplay.TextXAlignment = Enum.TextXAlignment.Right
+
+Heading.Name = "Heading"
+Heading.Parent = MainFrame
+Heading.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Heading.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Heading.BorderSizePixel = 0
+Heading.Position = UDim2.new(0, 0, 0.178873256, 0)
+Heading.Size = UDim2.new(0, 650, 0, -4)
+
+HeadingText.Name = "HeadingText"
+HeadingText.Parent = Heading
+HeadingText.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
+HeadingText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HeadingText.BorderSizePixel = 0
+HeadingText.Position = UDim2.new(0.0190114174, 0, -14.75, 0)
+HeadingText.Size = UDim2.new(0, 620, 0, 41)
+HeadingText.SizeConstraint = Enum.SizeConstraint.RelativeYY
+HeadingText.Font = Enum.Font.FredokaOne
+HeadingText.Text = "Heading "
+HeadingText.TextColor3 = Color3.fromRGB(255, 255, 255)
+HeadingText.TextScaled = true
+HeadingText.TextSize = 40.000
+HeadingText.TextWrapped = true
+HeadingText.TextXAlignment = Enum.TextXAlignment.Left
+
+ButtonFrame.Name = "ButtonFrame"
+ButtonFrame.Parent = MainFrame
+ButtonFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+ButtonFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ButtonFrame.BorderSizePixel = 0
+ButtonFrame.Position = UDim2.new(0.0174729563, 0, 0.499101311, 0)
+ButtonFrame.Size = UDim2.new(1, -20, 0.0280000009, 40)
+
+UICorner_13.Parent = ButtonFrame
+
+TextButton.Parent = ButtonFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.0150000192, 0, 0.208185628, 0)
+TextButton.Size = UDim2.new(1, -20, -0.200000003, 40)
+TextButton.Font = Enum.Font.FredokaOne
+TextButton.Text = "Cool Button huh"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 19.000
+
+UICorner_14.Parent = TextButton
+
+SeperatorFrame.Name = "SeperatorFrame"
+SeperatorFrame.Parent = MainFrame
+SeperatorFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+SeperatorFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SeperatorFrame.BorderSizePixel = 0
+SeperatorFrame.Position = UDim2.new(0.0190113708, 0, 0.646689177, 0)
+SeperatorFrame.Size = UDim2.new(1.0038023, -20, 0, 5)
+
+DropdownFrame.Name = "DropdownFrame"
+DropdownFrame.Parent = MainFrame
+DropdownFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+DropdownFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DropdownFrame.BorderSizePixel = 0
+DropdownFrame.Position = UDim2.new(0.0117694559, 0, 0.685526729, 0)
+DropdownFrame.Size = UDim2.new(1, -20, 0.0283122081, 40)
+
+UICorner_15.Parent = DropdownFrame
+
+DropdownHeader.Name = "DropdownHeader"
+DropdownHeader.Parent = DropdownFrame
+DropdownHeader.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+DropdownHeader.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DropdownHeader.BorderSizePixel = 0
+DropdownHeader.Position = UDim2.new(0.59207505, 0, 0.173780814, 0)
+DropdownHeader.Size = UDim2.new(0.389328063, 0, 0.662539363, 0)
+DropdownHeader.Font = Enum.Font.FredokaOne
+DropdownHeader.Text = ""
+DropdownHeader.TextColor3 = Color3.fromRGB(255, 255, 255)
+DropdownHeader.TextSize = 19.000
+DropdownHeader.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_16.Parent = DropdownHeader
+
+DropdownLabel.Name = "DropdownLabel"
+DropdownLabel.Parent = DropdownFrame
+DropdownLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DropdownLabel.BackgroundTransparency = 1.000
+DropdownLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DropdownLabel.BorderSizePixel = 0
+DropdownLabel.Position = UDim2.new(0.0335968398, 0, 0, 0)
+DropdownLabel.Size = UDim2.new(0.800000012, 0, 1, 0)
+DropdownLabel.Font = Enum.Font.FredokaOne
+DropdownLabel.Text = "Select Bone Type"
+DropdownLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
+DropdownLabel.TextSize = 19.000
+DropdownLabel.TextWrapped = true
+DropdownLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+DropdownListFrame.Name = "DropdownListFrame"
+DropdownListFrame.Parent = DropdownFrame
+DropdownListFrame.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+DropdownListFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DropdownListFrame.BorderSizePixel = 0
+DropdownListFrame.Position = UDim2.new(0.594051301, 0, 0.825458884, 0)
+DropdownListFrame.Size = UDim2.new(0.387351781, 0, 0, 120)
+DropdownListFrame.Visible = false
+
+UICorner_17.Parent = DropdownListFrame
+
+UIListLayout.Parent = DropdownListFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 2)
+
+LabelFrame.Name = "LabelFrame"
+LabelFrame.Parent = MainFrame
+LabelFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+LabelFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LabelFrame.BorderSizePixel = 0
+LabelFrame.Position = UDim2.new(0.0143960332, 0, 0.838467836, 0)
+LabelFrame.Size = UDim2.new(1, -20, 0.0280000009, 40)
+LabelFrame.Visible = false
+
+UICorner_18.Parent = LabelFrame
+
+SliderLabel_2.Name = "SliderLabel"
+SliderLabel_2.Parent = LabelFrame
+SliderLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SliderLabel_2.BackgroundTransparency = 1.000
+SliderLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SliderLabel_2.BorderSizePixel = 0
+SliderLabel_2.Position = UDim2.new(0.0296442918, 0, 0.115217611, 0)
+SliderLabel_2.Size = UDim2.new(0.97035569, 0, 0.751133561, 0)
+SliderLabel_2.Font = Enum.Font.FredokaOne
+SliderLabel_2.Text = "Smoothing"
+SliderLabel_2.TextColor3 = Color3.fromRGB(200, 200, 200)
+SliderLabel_2.TextSize = 19.000
+SliderLabel_2.TextWrapped = true
+SliderLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+KeybindFrame.Name = "KeybindFrame"
+KeybindFrame.Parent = MainFrame
+KeybindFrame.BackgroundColor3 = Color3.fromRGB(8, 8, 8)
+KeybindFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeybindFrame.BorderSizePixel = 0
+KeybindFrame.Position = UDim2.new(0.0143960332, 0, 0.838467836, 0)
+KeybindFrame.Size = UDim2.new(1, -20, 0.0280000009, 40)
+
+UICorner_19.Parent = KeybindFrame
+
+KeybindText.Name = "KeybindText"
+KeybindText.Parent = KeybindFrame
+KeybindText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+KeybindText.BackgroundTransparency = 1.000
+KeybindText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeybindText.BorderSizePixel = 0
+KeybindText.Position = UDim2.new(0.0296442918, 0, 0.115217611, 0)
+KeybindText.Size = UDim2.new(0.97035569, 0, 0.751133561, 0)
+KeybindText.Font = Enum.Font.FredokaOne
+KeybindText.Text = "Key to toggle aimbot"
+KeybindText.TextColor3 = Color3.fromRGB(200, 200, 200)
+KeybindText.TextSize = 19.000
+KeybindText.TextWrapped = true
+KeybindText.TextXAlignment = Enum.TextXAlignment.Left
+
+KeybindButton.Name = "KeybindButton"
+KeybindButton.Parent = KeybindFrame
+KeybindButton.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+KeybindButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeybindButton.BorderSizePixel = 0
+KeybindButton.Position = UDim2.new(0.789346933, 0, 0.150907487, 0)
+KeybindButton.Size = UDim2.new(0.224065676, -20, -0.10554336, 40)
+KeybindButton.Font = Enum.Font.FredokaOne
+KeybindButton.Text = "F"
+KeybindButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeybindButton.TextSize = 19.000
+
+UICorner_20.Parent = KeybindButton
+
+-- Scripts:
+
+local function STOVHW_fake_script() -- LeftFrame.LeftFrameScript 
+	local script = Instance.new('LocalScript', LeftFrame)
+
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local TweenService = game:GetService("TweenService")
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local LeftFrame = script.Parent
+	local MainFrame = script.Parent.Parent:WaitForChild("MainFrame")
+	
+	print("Main script initializing...")
+	
+	
+	
+	-- Templates
+	print("Looking for Toggle Template...")
+	local ToggleTemplate = ReplicatedStorage:WaitForChild("ToggleTemplate")
+	print("Found Toggle!")
+	print("Looking for Heading Template...")
+	local HeadingTemplate = ReplicatedStorage:WaitForChild("HeadingTemplate")
+	print("Found Heading!")
+	print("Looking for Slider Template...")
+	local SliderTemplate = ReplicatedStorage:WaitForChild("SliderTemplate")
+	print("Found Slider!")
+	local LabelTemplate = ReplicatedStorage:WaitForChild("LabelTemplate")
+	local SeperatorTemplate = ReplicatedStorage:WaitForChild("SeperatorTemplate")
+	local SectionButton = ReplicatedStorage:WaitForChild("SectionButton")
+	print("Looking for Dropdown Template...")
+	local DropdownTemplate = ReplicatedStorage:WaitForChild("DropdownTemplate")
+	print("Found Dropdown!")
+	print("Looking for Keybind Template...")
+	local KeybindFrame = ReplicatedStorage:WaitForChild("KeybindTemplate")
+	print("Found Keybind!")
+	
+	print("Step 1")
+	
+	-- Store original MainFrame elements
+	local originalElements = {}
+	for _, element in pairs(MainFrame:GetChildren()) do
+		if not element:IsA("UICorner") and not element:IsA("LocalScript") then
+			table.insert(originalElements, element)
+		end
+	end
+	
+	local function clearExistingButtons()
+		for _, child in pairs(LeftFrame:GetChildren()) do
+			if child:IsA("TextButton") or child.Name == "SectionButton" then
+				child:Destroy()
+			end
+		end
+	end
+	
+	print("Step 2")
+	
+	-- Create page container
+	local PageContainer = Instance.new("Folder")
+	PageContainer.Name = "Pages"
+	PageContainer.Parent = MainFrame
+	
+	-- Updated page configurations
+	local pages = {
+		AutoFarm = {
+			{Name = "Enable AutoFarm", Type = "Toggle"},
+			{Name = "Farm Speed", Type = "Slider", Min = 1, Max = 100},
+			{Name = "Farm Method", Type = "Dropdown", Options = {"Method 1", "Method 2", "Method 3"}},
+			{Name = "Farm Keybind", Type = "Keybind"}
+		},
+		Player = {
+			{Name = "Player Settings", Type = "Label"},
+			{Name = "WalkSpeed", Type = "Slider", Min = 16, Max = 500},
+			{Name = "JumpPower", Type = "Slider", Min = 50, Max = 500},
+			{Name = "", Type = "Separator"},
+			{Name = "Infinite Jump", Type = "Toggle"},
+			{Name = "Noclip", Type = "Toggle"},
+			{Name = "Fly", Type = "Toggle"},
+			{Name = "WaterWalk", Type = "Toggle"},
+			{Name = "ForceField", Type = "Toggle"},
+			{Name = "Toggle GUI", Type = "Keybind"}
+		}
+	}
+	
+	print("Step 3")
+	
+	
+	local function createSectionButton(name, position)
+		local button = SectionButton:Clone()
+		button.Name = name
+		button.ButtonLabel.Text = name
+		button.Position = UDim2.new(0, 0, 0.205, position)  
+		button.Parent = LeftFrame
+		return button
+	end
+	
+	local sections = {
+		{Name = "AutoFarm", Position = 10},
+		{Name = "Player", Position = 50}
+	}
+	
+	
+	local function createPageElement(elementType, config)
+		if elementType == "Keybind" then
+			print("Creating Keybind")
+			local keybind = KeybindFrame:Clone()
+			keybind.Name = config.Name
+			keybind.Size = UDim2.new(1, -20, 0.028, 40)
+			if keybind:FindFirstChild("KeybindLabel") then
+				keybind.KeybindLabel.Text = config.Name
+			end
+			return keybind
+			
+		elseif elementType == "Toggle" then
+			print("Creating Toggle")
+			local toggle = ToggleTemplate:Clone()
+			toggle.Name = config.Name
+			toggle.Size = UDim2.new(1, -20, 0.028, 40)
+			if toggle:FindFirstChild("ToggleLabel") then
+				toggle.ToggleLabel.Text = config.Name
+			end
+			return toggle
+	
+		elseif elementType == "Slider" then
+			print("Creating Slider")
+			local slider = SliderTemplate:Clone()
+			slider.Name = config.Name
+			slider.Size = UDim2.new(1, -20, 0.028, 40)
+			if slider:FindFirstChild("SliderLabel") then
+				slider.SliderLabel.Text = config.Name
+			end
+			if slider:FindFirstChild("SliderBar") then
+				slider.MinValue.Value = config.Min or 0
+				slider.MaxValue.Value = config.Max or 100
+			end
+			return slider
+	
+		elseif elementType == "Label" then
+			local label = LabelTemplate:Clone()
+			label.LabelText.Text = config.Name
+			return label
+	
+		elseif elementType == "Separator" then
+			local separator = SeperatorTemplate:Clone()
+			return separator
+			
+		elseif elementType == "Dropdown" then
+			local dropdown = DropdownTemplate:Clone()
+			dropdown.Name = config.Name
+			dropdown.Size = UDim2.new(1, -20, 0.028, 40)
+	
+			if dropdown:FindFirstChild("DropdownLabel") then
+				dropdown.DropdownLabel.Text = config.Name
+			end
+	
+			if config.Options then
+				local optionsList = dropdown:FindFirstChild("OptionsList")
+				if optionsList then
+					for _, option in ipairs(config.Options) do
+						local optionButton = Instance.new("TextButton")
+						optionButton.Size = UDim2.new(1, 0, 0, 30)
+						optionButton.Text = option
+						optionButton.Parent = optionsList
+					end
+				end
+			end
+	
+			return dropdown 
+		end
+	end
+	
+	local function createPage(pageName, elements)
+		local pageContainer = Instance.new("Frame")
+		pageContainer.Name = pageName
+		pageContainer.Size = UDim2.new(1, 0, 1, 0)
+		pageContainer.BackgroundTransparency = 1
+		pageContainer.Visible = false
+		pageContainer.Parent = PageContainer
+	
+		local header = HeadingTemplate:Clone()
+		header.Name = "Heading"
+		header.Parent = pageContainer
+	
+		local scrollFrame = Instance.new("ScrollingFrame")
+		scrollFrame.Name = "ContentFrame"
+		scrollFrame.Size = UDim2.new(1, 0, 0.8, 0)
+		scrollFrame.Position = UDim2.new(0, 0, 0.2, 0)
+		scrollFrame.BackgroundTransparency = 1
+		scrollFrame.ScrollBarThickness = 4
+		scrollFrame.Parent = pageContainer
+	
+		local listLayout = Instance.new("UIListLayout")
+		listLayout.Padding = UDim.new(0, 10)
+		listLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		listLayout.Parent = scrollFrame
+	
+		local yOffset = 0
+		for _, elementConfig in ipairs(elements) do
+			local element = createPageElement(elementConfig.Type, elementConfig)
+			if element then
+				element.Parent = scrollFrame
+				-- Add padding to yOffset
+				yOffset = yOffset + element.Size.Y.Offset + 15  -- Increased padding
+			end
+		end
+	
+		-- Add extra padding at the bottom to ensure full scroll access
+		scrollFrame.CanvasSize = UDim2.new(0, 0, 0, yOffset + 70)  -- Added bottom padding
+	
+		return pageContainer
+	end
+	
+	local function toggleOriginalElements(show)
+		for _, element in ipairs(originalElements) do
+			if element and element:IsA("GuiObject") then
+				element.Visible = show
+			end
+		end
+	end
+	
+	local function updateUserThumbnail()
+		local thumbNail = LeftFrame:FindFirstChild("UserThumbnail")
+		if thumbNail then
+			local success, thumbnailUrl = pcall(function()
+				return Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+			end)
+			if success then
+				thumbNail.Image = thumbnailUrl
+			end
+		end
+	end
+	
+	local function switchPage(pageName)
+		toggleOriginalElements(false)
+		for _, page in pairs(PageContainer:GetChildren()) do
+			page.Visible = page.Name == pageName
+			if page.Visible then
+				updateUserThumbnail()
+			end
+		end
+	end
+	
+	-- Initialize pages
+	for pageName, pageElements in pairs(pages) do
+		createPage(pageName, pageElements)
+	end
+	
+	clearExistingButtons()
+	
+	-- Create and connect section buttons
+	for _, section in ipairs(sections) do
+		local button = createSectionButton(section.Name, section.Position)
+		button.MouseButton1Click:Connect(function()
+			switchPage(section.Name)
+		end)
+	end
+	
+	
+	switchPage("AutoFarm")
+	print("Main script finished initializing!")
+end
+coroutine.wrap(STOVHW_fake_script)()
+local function ZRBIPAQ_fake_script() -- ToggleFrame.LocalScript 
+	local script = Instance.new('LocalScript', ToggleFrame)
+
+	local toggleFrame = script.Parent
+	local switchBackground = toggleFrame:WaitForChild("SwitchBackground")
+	local knob = switchBackground:WaitForChild("Knob")
+	local toggleLabel = toggleFrame:WaitForChild("ToggleLabel")
+	
+	local TweenService = game:GetService("TweenService")
+	
+	local isOn = false 
+	
+	local function toggleSwitch()
+		isOn = not isOn 
+	
+	
+		local knobGoal = {}
+		knobGoal.Position = isOn and UDim2.new(0.6, 0, 0, 0) or UDim2.new(0, 0, 0, 0)
+	
+		-- background changing depending on state
+		local bgGoal = {}
+		bgGoal.BackgroundColor3 = isOn and Color3.fromRGB(32, 200, 52) or Color3.fromRGB(50, 50, 50)
+	
+		local knobTween = TweenService:Create(knob, TweenInfo.new(0.2), knobGoal)
+		local bgTween = TweenService:Create(switchBackground, TweenInfo.new(0.2), bgGoal)
+	
+		knobTween:Play()
+		bgTween:Play()
+	
+		print(toggleLabel.Text .. " is " .. (isOn and "ON" or "OFF"))
+	end
+	
+	switchBackground.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			toggleSwitch()
+		end
+	end)
+end
+coroutine.wrap(ZRBIPAQ_fake_script)()
+local function JYPMO_fake_script() -- SliderFrame.LocalScript 
+	local script = Instance.new('LocalScript', SliderFrame)
+
+	local sliderFrame = script.Parent
+	local track = sliderFrame:WaitForChild("Track")
+	local knob = track:WaitForChild("Knob")
+	local fillBar = track:WaitForChild("FillBar")
+	local valueDisplay = sliderFrame:WaitForChild("ValueDisplay")
+	
+	-- Convert track to TextButton
+	local newTrack = Instance.new("TextButton")
+	newTrack.Name = "Track"
+	newTrack.Size = track.Size
+	newTrack.Position = track.Position
+	newTrack.BackgroundColor3 = Color3.fromRGB(30, 30, 30)  -- Add this
+	newTrack.BackgroundTransparency = 0  -- Change this to 0
+	newTrack.Text = ""
+	newTrack.Parent = track.Parent
+	track:Destroy()
+	track = newTrack
+	
+	fillBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	knob.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	
+	
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	
+	local dragging = false
+	local sliderMin = 0
+	local sliderMax = 100
+	
+	local function updateSlider(inputPosition)
+		local trackPosition = track.AbsolutePosition.X
+		local trackSize = track.AbsoluteSize.X
+	
+		local percentage = math.clamp((inputPosition - trackPosition) / trackSize, 0, 1)
+	
+		knob.Position = UDim2.new(percentage, -5, 0, 0)
+	
+		fillBar.Size = UDim2.new(percentage, 0, 1, 0)
+	
+		local sliderValue = math.floor(sliderMin + (sliderMax - sliderMin) * percentage)
+		valueDisplay.Text = sliderValue
+	end
+	
+	knob.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = true
+		end
+	end)
+	
+	UserInputService.InputEnded:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragging = false
+		end
+	end)
+	
+	RunService.RenderStepped:Connect(function()
+		if dragging then
+			local mousePosition = UserInputService:GetMouseLocation().X
+			updateSlider(mousePosition)
+		end
+	end)
+	
+	sliderFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			print("Slider clicked!")
+			local mousePosition = UserInputService:GetMouseLocation().X
+			updateSlider(mousePosition)
+			dragging = true
+		end
+	end)
+end
+coroutine.wrap(JYPMO_fake_script)()
+local function RIAK_fake_script() -- MainFrame.HeadingScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local MainFrame = script.Parent
+	local heading = MainFrame:WaitForChild("Heading") 
+	local imageLabel = heading:WaitForChild("UserThumbnail")
+	
+	local Players = game:GetService("Players") 
+	local player = Players.LocalPlayer
+	
+	-- grab the users thumbnail safetely
+	local success, thumbnailUrl = pcall(function()
+		return Players:GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420)
+	end)
+	
+	if success then
+		imageLabel.Image = thumbnailUrl
+	else
+		warn("Failed to load player thumbnail.")
+	end
+end
+coroutine.wrap(RIAK_fake_script)()
+local function YSIZTG_fake_script() -- ButtonFrame.ButtonScript 
+	local script = Instance.new('LocalScript', ButtonFrame)
+
+	
+end
+coroutine.wrap(YSIZTG_fake_script)()
+local function HNTJUZ_fake_script() -- DropdownFrame.DropdownScript 
+	local script = Instance.new('LocalScript', DropdownFrame)
+
+	local dropdownFrame = script.Parent
+	local dropdownHeader = dropdownFrame:WaitForChild("DropdownHeader")
+	local dropdownListFrame = dropdownFrame:WaitForChild("DropdownListFrame")
+	
+	-- Initial state
+	dropdownListFrame.Visible = false
+	
+	-- Items for the dropdown
+	local dropdownItems = {"Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8"}
+	local itemHeight = 30
+	local maxVisibleItems = 5
+	
+	-- Add ScrollingFrame
+	local scrollFrame = Instance.new("ScrollingFrame")
+	scrollFrame.Size = UDim2.new(1, 0, 1, 0)
+	scrollFrame.BackgroundTransparency = 1
+	scrollFrame.ScrollBarThickness = 4
+	scrollFrame.Parent = dropdownListFrame
+	
+	-- Create the dropdown items
+	local function createDropdownItems()
+		-- Clear existing items
+		for _, child in pairs(scrollFrame:GetChildren()) do
+			if child:IsA("TextButton") then
+				child:Destroy()
+			end
+		end
+	
+		-- Calculate total height needed
+		local totalHeight = #dropdownItems * itemHeight
+		local visibleHeight = math.min(maxVisibleItems * itemHeight, totalHeight)
+	
+		-- Set frame sizes
+		dropdownListFrame.Size = UDim2.new(0.387, 0, 0, visibleHeight)
+		scrollFrame.CanvasSize = UDim2.new(0, 0, 0, totalHeight)
+	
+		-- Create new items
+		for i, item in ipairs(dropdownItems) do
+			local button = Instance.new("TextButton")
+			button.Name = item
+			button.Text = item
+			button.Font = Enum.Font.FredokaOne
+			button.Size = UDim2.new(1, 0, 0, itemHeight)
+			button.Position = UDim2.new(0, 0, 0, (i-1) * itemHeight)
+			button.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+			button.TextColor3 = Color3.fromRGB(255, 255, 255)
+			button.TextXAlignment = Enum.TextXAlignment.Center
+			button.Parent = scrollFrame
+	
+			-- Hover effect
+			button.MouseEnter:Connect(function()
+				button.BackgroundColor3 = Color3.fromRGB(70, 70, 70)
+			end)
+	
+			button.MouseLeave:Connect(function()
+				button.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
+			end)
+	
+			-- Click functionality
+			button.MouseButton1Click:Connect(function()
+				dropdownHeader.Text = item
+				dropdownHeader.TextXAlignment = Enum.TextXAlignment.Center
+				dropdownListFrame.Visible = false
+			end)
+		end
+	end
+	
+	-- Toggle dropdown visibility
+	dropdownHeader.MouseButton1Click:Connect(function()
+		dropdownListFrame.Visible = not dropdownListFrame.Visible
+	end)
+	
+	-- Create initial items
+	createDropdownItems()
+	
+end
+coroutine.wrap(HNTJUZ_fake_script)()
+local function KVURB_fake_script() -- MainFrame.MovingScript 
+	local script = Instance.new('LocalScript', MainFrame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local RunService = game:GetService("RunService")
+	local TweenService = game:GetService("TweenService")
+	
+	local mainFrame = script.Parent
+	local leftFrame = mainFrame.Parent.LeftFrame
+	local dragging = false
+	local dragInput
+	local dragStart
+	local startPos
+	local leftFrameStartPos
+	local lastMousePos
+	
+	local DRAG_SPEED = 0.28
+	
+	-- Only check header/title area for dragging
+	local function isInDraggableArea(input)
+		local mousePos = UserInputService:GetMouseLocation()
+		local topArea = 130 -- Increased drag zone height
+		return mousePos.Y <= mainFrame.AbsolutePosition.Y + topArea
+	end
+	
+	local function lerp(a, b, t)
+		return a + (b - a) * t
+	end
+	
+	mainFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 and isInDraggableArea(input) then
+			dragging = true
+			dragStart = input.Position
+			startPos = mainFrame.Position
+			leftFrameStartPos = leftFrame.Position
+			lastMousePos = dragStart
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	mainFrame.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement then
+			dragInput = input
+		end
+	end)
+	
+	RunService.RenderStepped:Connect(function()
+		if dragging and dragInput then
+			local delta = dragInput.Position - dragStart
+			local targetPos = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+				startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+			local leftTargetPos = UDim2.new(leftFrameStartPos.X.Scale, leftFrameStartPos.X.Offset + delta.X,
+				leftFrameStartPos.Y.Scale, leftFrameStartPos.Y.Offset + delta.Y)
+	
+			mainFrame.Position = UDim2.new(
+				startPos.X.Scale, 
+				lerp(mainFrame.Position.X.Offset, targetPos.X.Offset, DRAG_SPEED),
+				startPos.Y.Scale, 
+				lerp(mainFrame.Position.Y.Offset, targetPos.Y.Offset, DRAG_SPEED)
+			)
+	
+			leftFrame.Position = UDim2.new(
+				leftFrameStartPos.X.Scale, 
+				lerp(leftFrame.Position.X.Offset, leftTargetPos.X.Offset, DRAG_SPEED),
+				leftFrameStartPos.Y.Scale, 
+				lerp(leftFrame.Position.Y.Offset, leftTargetPos.Y.Offset, DRAG_SPEED)
+			)
+		end
+	end)
+	
+end
+coroutine.wrap(KVURB_fake_script)()
+local function JITS_fake_script() -- KeybindFrame.KeybindScript 
+	local script = Instance.new('LocalScript', KeybindFrame)
+
+	local UserInputService = game:GetService("UserInputService")
+	local keybindFrame = script.Parent
+	local keybindButton = keybindFrame:WaitForChild("KeybindButton")
+	local keybindText = keybindFrame:WaitForChild("KeybindText") -- Name of the keybind 
+	local currentKey = Enum.KeyCode.RightShift
+	
+	local listening = false
+	
+	local function updateKeybindText()
+		keybindButton.Text = currentKey.Name
+	end
+	
+	local function handleKeybindPress()
+		print("Keybind pressed:", currentKey.Name)
+	end
+	
+	keybindButton.MouseButton1Click:Connect(function()
+		listening = true
+		keybindButton.Text = "..."
+	end)
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if listening and input.UserInputType == Enum.UserInputType.Keyboard then
+			currentKey = input.KeyCode
+			updateKeybindText()
+			listening = false
+		elseif not listening and input.KeyCode == currentKey then
+			handleKeybindPress()
+		end
+	end)
+	
+	updateKeybindText()
+end
+coroutine.wrap(JITS_fake_script)()
+
+local Library = {}
+
+-- Utility: Create an Instance
+local function createInstance(className, properties)
+    local instance = Instance.new(className)
+    for property, value in pairs(properties) do
+        instance[property] = value
+    end
+    return instance
+end
+
+-- Library: Create a Window
+function Library:CreateWindow(title)
+    local window = {}
+
+    -- Main Window
+    local ScreenGui = createInstance("ScreenGui", {
+        Name = "KolaLibrary",
+        Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui"),
+        ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    })
+
+    local MainFrame = createInstance("Frame", {
+        Name = "MainFrame",
+        BackgroundColor3 = Color3.fromRGB(16, 16, 16),
+        BorderSizePixel = 0,
+        Position = UDim2.new(0.3, 0, 0.1, 0),
+        Size = UDim2.new(0, 650, 0, 442),
+        Parent = ScreenGui
+    })
+
+    createInstance("UICorner", {Parent = MainFrame})
+
+    -- Title Heading
+    local Heading = createInstance("TextLabel", {
+        Name = "Heading",
+        Text = title,
+        Font = Enum.Font.FredokaOne,
+        TextSize = 24,
+        BackgroundTransparency = 1,
+        Size = UDim2.new(1, 0, 0, 50),
+        TextColor3 = Color3.fromRGB(255, 255, 255),
+        Parent = MainFrame
+    })
+
+    -- Tabs System
+    local Tabs = {}
+    function window:NewTab(tabName)
+        local tab = {}
+        
+        local TabFrame = createInstance("ScrollingFrame", {
+            Name = tabName,
+            Size = UDim2.new(1, 0, 0.9, 0),
+            Position = UDim2.new(0, 0, 0.1, 0),
+            CanvasSize = UDim2.new(0, 0, 0, 0),
+            BackgroundTransparency = 1,
+            Parent = MainFrame
+        })
+
+        createInstance("UIListLayout", {Parent = TabFrame, Padding = UDim.new(0, 10)})
+
+        -- Section Creator
+        function tab:NewSection(sectionName)
+            local section = {}
+
+            local SectionLabel = createInstance("TextLabel", {
+                Text = sectionName,
+                BackgroundTransparency = 1,
+                Font = Enum.Font.FredokaOne,
+                TextColor3 = Color3.fromRGB(200, 200, 200),
+                TextSize = 20,
+                Parent = TabFrame
+            })
+
+            -- Toggle Function
+            function section:NewToggle(name, description, callback)
+                local state = false
+
+                local ToggleFrame = createInstance("Frame", {
+                    BackgroundColor3 = Color3.fromRGB(8, 8, 8),
+                    Size = UDim2.new(1, -20, 0, 40),
+                    Parent = TabFrame
+                })
+
+                createInstance("UICorner", {Parent = ToggleFrame})
+
+                local ToggleLabel = createInstance("TextLabel", {
+                    Text = name .. " - " .. description,
+                    TextColor3 = Color3.fromRGB(200, 200, 200),
+                    BackgroundTransparency = 1,
+                    Size = UDim2.new(0.8, 0, 1, 0),
+                    Parent = ToggleFrame
+                })
+
+                local ToggleButton = createInstance("TextButton", {
+                    Text = "OFF",
+                    Size = UDim2.new(0.2, 0, 1, 0),
+                    Position = UDim2.new(0.8, 0, 0, 0),
+                    BackgroundColor3 = Color3.fromRGB(50, 50, 50),
+                    Parent = ToggleFrame
+                })
+
+                createInstance("UICorner", {Parent = ToggleButton})
+
+                ToggleButton.MouseButton1Click:Connect(function()
+                    state = not state
+                    ToggleButton.Text = state and "ON" or "OFF"
+                    ToggleButton.BackgroundColor3 = state and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(50, 50, 50)
+                    callback(state)
+                end)
+            end
+
+            -- Slider Function
+            function section:NewSlider(name, description, min, max, default, callback)
+                local SliderFrame = createInstance("Frame", {
+                    BackgroundColor3 = Color3.fromRGB(8, 8, 8),
+                    Size = UDim2.new(1, -20, 0, 40),
+                    Parent = TabFrame
+                })
+
+                createInstance("UICorner", {Parent = SliderFrame})
+
+                local SliderLabel = createInstance("TextLabel", {
+                    Text = name .. " - " .. description,
+                    BackgroundTransparency = 1,
+                    TextColor3 = Color3.fromRGB(200, 200, 200),
+                    Size = UDim2.new(0.7, 0, 1, 0),
+                    Parent = SliderFrame
+                })
+
+                local Slider = createInstance("TextButton", {
+                    Text = tostring(default),
+                    Size = UDim2.new(0.3, 0, 1, 0),
+                    Position = UDim2.new(0.7, 0, 0, 0),
+                    BackgroundColor3 = Color3.fromRGB(50, 50, 50),
+                    Parent = SliderFrame
+                })
+
+                Slider.MouseButton1Click:Connect(function()
+                    local value = math.clamp(default, min, max)
+                    callback(value)
+                    Slider.Text = value
+                end)
+            end
+
+            -- Button Function
+            function section:NewButton(name, description, callback)
+                local Button = createInstance("TextButton", {
+                    Text = name .. " - " .. description,
+                    BackgroundColor3 = Color3.fromRGB(21, 21, 21),
+                    TextColor3 = Color3.fromRGB(255, 255, 255),
+                    Size = UDim2.new(1, -20, 0, 40),
+                    Parent = TabFrame
+                })
+
+                createInstance("UICorner", {Parent = Button})
+
+                Button.MouseButton1Click:Connect(function()
+                    callback()
+                end)
+            end
+
+            return section
+        end
+
+        return tab
+    end
+
+    return window
+end
+
+return Library
